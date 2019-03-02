@@ -17,4 +17,5 @@ public class GetTests extends BaseTest{
     public void verifyGetSuccessfull() {
         given().when().get(reader.getUsersEndpoint()).then().statusCode(200);
     }
+    
 }
