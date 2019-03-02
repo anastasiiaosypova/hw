@@ -8,14 +8,15 @@ import static org.hamcrest.CoreMatchers.containsString;
 
 public class GetTests extends BaseTest{
 
+
     @Test
     public void verifyGetReturnUser() {
-        given().when().get(reader.getUsersEndpoint()).then().statusCode(200).body(containsString("Leanne Graham"));
+        given().when().get(userstEndpoint).then().statusCode(200).body(containsString("Leanne Graham"));
     }
 
     @Test
     public void verifyGetSuccessfull() {
-        given().when().get(reader.getUsersEndpoint()).then().statusCode(200);
+        given().when().get(userstEndpoint).then().statusCode(200);
     }
-    
+
 }

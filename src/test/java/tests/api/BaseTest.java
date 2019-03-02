@@ -8,10 +8,13 @@ import static io.restassured.RestAssured.given;
 
 //@Listeners({CustomTestListener.class})
 public class BaseTest {
-    ConfigReader reader;
+    protected ConfigReader reader;
+    protected String userstEndpoint;
+
     @BeforeTest
     public void setup(){
         reader = new ConfigReader();
         RestAssured.baseURI = reader.getUrl();
+        userstEndpoint = reader.getUsersEndpoint();
     }
 }
