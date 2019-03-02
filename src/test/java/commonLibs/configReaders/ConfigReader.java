@@ -6,7 +6,6 @@ import java.util.Properties;
 public class ConfigReader {
     Properties properties;
 
-
     public ConfigReader() {
         try {
            String workingDir = System.getProperty("user.dir");
@@ -21,8 +20,11 @@ public class ConfigReader {
     }
 
     public String getUrl() {
-
         return properties.getProperty("baseURL");
     }
 
+
+    public String getUsersEndpoint() {
+        return properties.getProperty("users");
+    }
 }
